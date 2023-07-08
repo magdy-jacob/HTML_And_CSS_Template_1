@@ -49,15 +49,28 @@ html{
 body{
     font-family: 'Work Sans', sans-serif;
 }
+@media (max-width: 767px)  {
+    .cotainer{
+        width: 360px;
+    }
+    .spacial-headings{
+        font-size: 60px;
+    }
+    .spacial-headings + p{
+        margin: -20px 0 0;
+        font-size: 20px;
+    }
+    .about .about-content .image {
+        margin: 0 auto 60px;
+        width: 50px;
+    }
+}
 @media (min-width: 768px)  {
     .cotainer{
         width: 750px;
     }
     .spacial-headings{
         font-size: 80px;
-    }
-    .spacial-headings + p{
-        margin: -20px 0 0;
     }
 }
 @media (min-width: 992px)  {
@@ -178,6 +191,12 @@ header .links ul li:not(:last-child){
     padding-bottom: var(--section-padding);
     background-color:var(--section-background) ;
 }
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 40px;
+    margin-top: 100px;
+}
 .features .feat{
     padding: 20px;
     text-align: center;
@@ -203,7 +222,7 @@ header .links ul li:not(:last-child){
 }
 .services .sarvices-content{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
     gap: 40px;
     margin-top: 100px;
 }
@@ -260,14 +279,15 @@ header .links ul li:not(:last-child){
 /* start protofolio */
 .protofolio{
     background-color: var(--section-background);
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
 }
 .protofolio .portfolio-content{
-    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 30px;
+    margin-top: 100px;
 }
 .protofolio .portfolio-content .card{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     text-align: center;
 }
 .protofolio .portfolio-content .card img{
@@ -286,7 +306,7 @@ header .links ul li:not(:last-child){
 }
 /* end portfolio */
 /* start about */
-.about,.contact{
+.about,.contact,.protofolio{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding + 60px);
 
@@ -305,13 +325,13 @@ header .links ul li:not(:last-child){
 }
 .about .about-content .image{
     position: relative;
-    width: 250px;
+    width: 450px;
     margin-left: 50px;
 }
 @media (max-width:1199px) {
     .about .about-content .image {
         margin: 0 auto 60px;
-        width: 500px;
+        width: 20em;
     }
 }
 .about .about-content .image::after{
@@ -347,7 +367,7 @@ header .links ul li:not(:last-child){
 }
 
 .about .about-content .text{
-    flex-basis: calc(100% - 500px) ;
+    flex-basis: calc(100% - 650px) ;
 }
 .about .about-content .text p:first-of-type{
     font-weight:bold ;
@@ -382,8 +402,8 @@ header .links ul li:not(:last-child){
 }
 @media (max-width:767px) {
     .contact .info .label,
-    .contact .info .link{
-        font-size: 25px;
+    .contact .info .label + a{
+        font-size: 20px;
     }
 }
 .contact .info .link{
